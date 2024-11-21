@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f4f4; /* Light grey background for a clean look */
+  color: #333; /* Darker text color for better readability */
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+
+
+
+.container1 {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 6em;
+  left: 17em;
+  margin: auto;
+  height: 70vh;
+  border-radius: 20px;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  color: white; 
+}
+.container1 h2 {
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: bold;
+  padding: 10px;
+  width: 15vw;
+  border-bottom: 2px solid #e25111;
+}
+
+
+
+form {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+
+
+input[type="submit"] {
+  background-color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type ="submit"]:hover{
+  color: #fff;
+  background-color: #e25111;
+  box-shadow: 0 8px 15px rgba(249, 90, 5, 0.9);
+  transition: background-color 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out;
+}
+
+
+.inputbox {
+  position: relative;
+  margin: 0;
+  width: 300px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-bottom: 10px;
+  transform: translateY(-8%);
+  color: #fff;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label, 
+input:valid ~ label {
+  top: -1px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  border: none;
+  margin-top:10px;
+  margin-bottom:auto;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px 0 5px;
+  color: #fff;
+}
+
+
+
+/* Dashboard */
+
+.container_dashboard {
+  overflow: hidden;
+  height: 80vh;
+  padding-top: 150px; /* Adjusted padding for better spacing */
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card1 {
+  background-color: #e25111; /* White background for cards */
+  border-radius: 10px;  
+  margin: 20px;
+  width: 25vw;
+  height: 20vh;
+  display: flex;
+  cursor: pointer;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.card1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card1 h1 {
+  color: #ffff; /* Dark text color for readability */
+  font-size: 24px;
+  text-shadow: none; /* Removed text shadow for a cleaner look */
+}
+
+/*navbar */
+
+
+.fixed1{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.row{
+  display: flex;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  background-size: cover;
+}
+nav{
+  height: 0px;
+}
+.logo{
+  height: 80px;
+  width: auto;
+  float: left;
+  margin-left: 20px;
+}
+
+.logo img{
+  margin-top: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+
+.logo h2{
+  color: white;
+  font-family: 'BebasRegular';
+  font-size:24px;
+  margin-top: 25px !important;
+  width: 20em;
+  margin: auto;
+  position: absolute;
+  left: 5em;
+}
+.main-nav{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 10px;
+  list-style: none;
+  text-decoration: none;
+  position: absolute;
+  top: 1em;
+}
+.main-nav li{
+  display: inline-block;
+  margin-right: 40px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav li a:hover{  
+  padding: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid #e25111;
+  border-radius: 30px;
+  background-color: #e25111;
+  border-radius: 20px;
+  transition: color 500ms ease-in-out;
+  transition: background-color 600ms ease-in-out;
+}
+
+
